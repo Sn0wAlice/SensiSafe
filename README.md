@@ -1,7 +1,7 @@
 # SensiSafe
 
 <p align="center">
-    <img src="./public/banned.jpg">
+    <img src="https://github.com/Sn0wAlice/SensiSafe/blob/main/public/banned.jpg?raw=true">
 </p>
 
 SensiSafe est une API de détection de contenu inapproprié sur Internet, spécialisée dans la détection d'upload de contenus pornographiques par les utilisateurs. Elle utilise des algorithmes d'apprentissage automatique pour analyser les images téléchargées sur un site web et identifier celles qui contiennent du contenu inapproprié. L'API SensiSafe peut être intégrée facilement à un site web existant pour renforcer la sécurité et la protection des utilisateurs contre les contenus à caractère pornographique. Elle permet également aux propriétaires de sites de contrôler leur contenu et d'agir rapidement en cas de violation des termes et conditions d'utilisation du site. SensiSafe est donc une solution innovante pour améliorer la sécurité en ligne et protéger les utilisateurs de tout âge contre les contenus indésirables.
