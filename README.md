@@ -2,26 +2,30 @@
 
 ![](https://github.com/Sn0wAlice/SensiSafe/blob/main/public/banned.jpg?raw=true)
 
-SensiSafe est une API de détection de contenu inapproprié sur Internet, spécialisée dans la détection d'upload de contenus pornographiques par les utilisateurs. Elle utilise des algorithmes d'apprentissage automatique pour analyser les images téléchargées sur un site web et identifier celles qui contiennent du contenu inapproprié. L'API SensiSafe peut être intégrée facilement à un site web existant pour renforcer la sécurité et la protection des utilisateurs contre les contenus à caractère pornographique. Elle permet également aux propriétaires de sites de contrôler leur contenu et d'agir rapidement en cas de violation des termes et conditions d'utilisation du site. SensiSafe est donc une solution innovante pour améliorer la sécurité en ligne et protéger les utilisateurs de tout âge contre les contenus indésirables.
+SensiSafe is an API for detecting inappropriate content on the Internet, specialized in detecting upload of pornographic content by users. It uses machine learning algorithms to analyze images uploaded to a website and identify those that contain inappropriate content. The SensiSafe API can be easily integrated into an existing website to enhance user security and protection from pornographic content. It also allows site owners to control their content and act quickly in the event of a breach of the site’s terms and conditions of use. SensiSafe is an innovative solution to improve online security and protect users of all ages from unwanted content.
 
 ## How to install 
-- Tout d'abord, assurez-vous que Node.js est installé sur votre système. Pour vérifier si Node.js est déjà installé, ouvrez une console et tapez `node -v`. Si vous obtenez une version de Node.js, vous êtes prêt à passer à l'étape suivante. Sinon, vous devrez d'abord installer Node.js.
-- Une fois que vous avez Node.js installé, ouvrez une console et naviguez jusqu'au répertoire de votre projet.
-- Ensuite, exécutez la commande `npm i` pour initialiser un nouveau projet Node.js. Cette commande va installer les modules sur votre machine
-- Configurez votre service: 
-  - Changez le port: dans `main.js` (default: 3000)
-  - Changez l'image de ban `public/banned.jpg`
+- First, make sure that Node.js is installed on your system. To check if Node.js is already installed, open a console and type `node -v`. If you get a version of Node.js, you are ready to go to the next step. Otherwise, you will need to install Node.js.
+- Once you have Node.js installed, open a console and navigate to your project directory.
+- Then run the command `npm i' to initialize a new Node.jss project. This command will install the modules on your machine
+- Set up your service: 
+  - Change the port: in main.js (default: 3000)
+  - Change the ban image `public/banned.jpg`
 
 ## Run
-Utilisez [pm2](https://pm2.io/docs/runtime/overview/) pour faire tourner le script sur votre serveur en arriere plan
+Use [pm2](https://pm2.io/docs/runtime/overview/) to run the script on your backend server
 
 ## API
 | URL | Description | body |
 | :-- | :---------- | :--- |
-| `/api/detect` | Permets de récupérer un JSON afin de pouvoir traiter les données brutes de l'api | "file -> picture_to_analyse"|
-| `/api/cadre` | Permets de créé un cadre avec une description sur tout ce qui est détecté par le système | "file -> picture_to_analyse"|
-| `/api/blur` | Retourne l'image censurée si besoin ou originale si aucune censure n'a été appliqué | "file -> picture_to_analyse"|
-| `/api/ban` | Retourne l'image "banned" si besoin ou originale si aucun contenu pour pornographique n'a été appliqué | "file -> picture_to_analyse"|
+| `/api/detect` | Allows to recover a JSON in order to process the raw data of the api | "file -> picture_to_analyse"|
+| `/api/cadre` | Allows to create a frame with a description of everything that is detected by the system | "file -> picture_to_analyse"|
+| `/api/blur` | Returns the censored image if necessary or original if no censorship has been applied | "file -> picture_to_analyse"|
+| `/api/ban` | Returns the "banned" image if needed or original if no pornographic content has been applied | "file -> picture_to_analyse"|
+
+## Example
+All example are available in `./examples/`
+
 
 ## Contributors
 - [Sn0wAlice](https://github.com/Sn0wAlice)
